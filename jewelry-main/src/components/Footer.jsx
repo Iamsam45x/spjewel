@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="footer-brand">
             <div className="footer-logo">
               <Gem size={20} />
-              <span>Aurum</span>
+              <span>SPJewel</span>
             </div>
             <p className="footer-tagline">Virtual try-on for fine jewelry. See it on you before you buy.</p>
           </div>
@@ -25,20 +25,20 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h4>Company</h4>
-            <Link to="/seller">Sell on Aurum</Link>
+            <Link to="/seller">Sell on SPJewel</Link>
             <a href="#">About Us</a>
             <a href="#">Careers</a>
             <a href="#">Press</a>
           </div>
           <div className="footer-col">
             <h4>Contact</h4>
-            <span><Mail size={14} /> hello@aurum.co</span>
+            <span><Mail size={14} /> hello@SPJewel.co</span>
             <span><Phone size={14} /> +1 (800) 555-GEMS</span>
             <span><MapPin size={14} /> New York, NY</span>
           </div>
         </div>
         <div className="footer-bottom">
-          <span>&copy; 2026 Aurum. All rights reserved.</span>
+          <span>&copy; 2026 SPJewel. All rights reserved.</span>
           <div className="footer-links">
             <a href="#">Privacy</a>
             <a href="#">Terms</a>

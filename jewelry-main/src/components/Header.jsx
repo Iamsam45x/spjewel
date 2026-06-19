@@ -19,7 +19,7 @@ export default function Header() {
       <div className="header-inner container">
         <Link to="/" className="logo">
           <Gem size={24} />
-          <span className="logo-text">Aurum</span>
+          <span className="logo-text">SPJewel</span>
         </Link>
 
         <nav className={`nav ${mobileOpen ? 'open' : ''}`}>
