@@ -278,30 +278,43 @@ export default function ARTryOn() {
 
       <div className="artryon-viewport">
         <video ref={videoRef} className="artryon-video" playsInline autoPlay muted />
+        <div className="artryon-silhouette-bg" />
         <canvas ref={canvasRef} className="artryon-canvas" />
 
         <svg className="artryon-silhouette" viewBox="0 0 260 340" preserveAspectRatio="xMidYMin meet">
-          <path
-            className="artryon-silhouette-outline"
-            d="M 130 2
-               C 170 2, 192 30, 194 60
-               C 196 84, 186 104, 176 118
-               L 168 134
-               C 182 139, 200 150, 210 162
-               C 220 174, 228 190, 230 210
-               L 232 262
-               L 28 262
-               L 30 210
-               C 32 190, 40 174, 50 162
-               C 60 150, 78 139, 92 134
-               L 84 118
-               C 74 104, 66 84, 68 60
-               C 70 30, 90 2, 130 2 Z"
-          />
-          <line className="artryon-silhouette-guide" x1="130" y1="37" x2="130" y2="217" />
-          <line className="artryon-silhouette-guide artryon-silhouette-eye-line" x1="80" y1="47" x2="180" y2="47" />
-          <circle className="artryon-silhouette-guide" cx="88" cy="47" r="3" />
-          <circle className="artryon-silhouette-guide" cx="172" cy="47" r="3" />
+          <defs>
+            <mask id="silhouette-canvas-mask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+              <rect width="1" height="1" fill="black" />
+              <path d="M 0.5 0.004 C 0.6846 0.004, 0.8 0.06, 0.8077 0.13 C 0.8154 0.184, 0.7769 0.224, 0.7462 0.252 C 0.7308 0.268, 0.7385 0.284, 0.7769 0.3 C 0.8538 0.316, 0.9 0.336, 0.9231 0.36 C 0.9615 0.392, 0.9846 0.436, 0.9923 0.49 L 0.9923 1 L 0.0077 1 L 0.0077 0.49 C 0.0154 0.436, 0.0385 0.392, 0.0769 0.36 C 0.1 0.336, 0.1462 0.316, 0.2231 0.3 C 0.2615 0.284, 0.2692 0.268, 0.2462 0.252 C 0.2231 0.224, 0.1846 0.184, 0.1923 0.13 C 0.2 0.06, 0.3154 0.004, 0.5 0.004 Z" fill="white" />
+            </mask>
+            <mask id="silhouette-bg-mask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+              <rect width="1" height="1" fill="black" />
+              <path d="M 0.5 0.004 C 0.6846 0.004, 0.8 0.06, 0.8077 0.13 C 0.8154 0.184, 0.7769 0.224, 0.7462 0.252 C 0.7308 0.268, 0.7385 0.284, 0.7769 0.3 C 0.8538 0.316, 0.9 0.336, 0.9231 0.36 C 0.9615 0.392, 0.9846 0.436, 0.9923 0.49 L 0.9923 1 L 0.0077 1 L 0.0077 0.49 C 0.0154 0.436, 0.0385 0.392, 0.0769 0.36 C 0.1 0.336, 0.1462 0.316, 0.2231 0.3 C 0.2615 0.284, 0.2692 0.268, 0.2462 0.252 C 0.2231 0.224, 0.1846 0.184, 0.1923 0.13 C 0.2 0.06, 0.3154 0.004, 0.5 0.004 Z" fill="white" transform="translate(0.5, 0.5) scale(1.06) translate(-0.5, -0.5)" />
+            </mask>
+          </defs>
+          <g className="artryon-silhouette-guides">
+            <path
+              className="artryon-silhouette-outline"
+              d="M 130 2
+                 C 178 2, 208 30, 210 65
+                 C 212 92, 202 112, 194 126
+                 C 190 134, 192 142, 202 150
+                 C 222 158, 234 168, 240 180
+                 C 250 196, 256 218, 258 245
+                  L 258 500
+                 L 2 500
+                 L 2 245
+                 C 4 218, 10 196, 20 180
+                 C 26 168, 38 158, 58 150
+                 C 68 142, 70 134, 64 126
+                 C 58 112, 48 92, 50 65
+                 C 52 30, 82 2, 130 2 Z"
+            />
+            <line className="artryon-silhouette-guide" x1="130" y1="37" x2="130" y2="217" />
+            <line className="artryon-silhouette-guide artryon-silhouette-eye-line" x1="70" y1="47" x2="190" y2="47" />
+            <circle className="artryon-silhouette-guide" cx="78" cy="47" r="3" />
+            <circle className="artryon-silhouette-guide" cx="182" cy="47" r="3" />
+          </g>
         </svg>
 
         <div className="artryon-guide-text">

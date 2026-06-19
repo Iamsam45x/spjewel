@@ -9,6 +9,7 @@ import SellerDashboard from './pages/SellerDashboard';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import About from './pages/About';
+import Lookbook from './pages/Lookbook';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about" element={<About />} />
+          <Route path="/lookbook" element={<Lookbook />} />
         </Routes>
       </main>
       <Footer />

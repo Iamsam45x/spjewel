@@ -4,6 +4,24 @@ import { PRODUCTS, CATEGORIES } from '../data/mockData';
 import ProductCard from '../components/ProductCard';
 import './Home.css';
 
+const LOOKBOOK_PREVIEW = [
+  {
+    image: 'https://images.pexels.com/photos/10216924/pexels-photo-10216924.jpeg?auto=compress&cs=tinysrgb&w=600',
+    title: 'Golden Hour',
+    productId: 3,
+  },
+  {
+    image: 'https://images.pexels.com/photos/10308953/pexels-photo-10308953.jpeg?auto=compress&cs=tinysrgb&w=600',
+    title: 'Pearl Glow',
+    productId: 6,
+  },
+  {
+    image: 'https://images.pexels.com/photos/1084663/pexels-photo-1084663.jpeg?auto=compress&cs=tinysrgb&w=600',
+    title: 'Gold Rush',
+    productId: 5,
+  },
+];
+
 export default function Home() {
   const featured = PRODUCTS.filter(p => p.badge);
   const bestSellers = PRODUCTS.filter(p => p.rating >= 4.7).slice(0, 4);
@@ -74,6 +92,24 @@ export default function Home() {
           <div className="ar-visual">
             <img src="https://images.pexels.com/photos/3214958/pexels-photo-3214958.jpeg?auto=compress&cs=tinysrgb&w=600" alt="AR demo" />
           </div>
+        </div>
+      </section>
+
+      {/* Featured Looks */}
+      <section className="lookbook-preview container">
+        <div className="section-header">
+          <h2 className="section-title">Featured Looks</h2>
+          <Link to="/lookbook" className="view-all">View Lookbook <ArrowRight size={14} /></Link>
+        </div>
+        <div className="lookbook-preview-grid">
+          {LOOKBOOK_PREVIEW.map((look, i) => (
+            <Link key={i} to={`/product/${look.productId}`} className="lookbook-preview-card">
+              <img src={look.image} alt={look.title} loading="lazy" />
+              <div className="lookbook-preview-overlay">
+                <span>{look.title}</span>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 

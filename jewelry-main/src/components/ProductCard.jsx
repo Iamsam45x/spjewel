@@ -1,10 +1,12 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ShoppingBag, Eye } from 'lucide-react';
+import { ShoppingBag, Eye, Heart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import './ProductCard.css';
 
 export default function ProductCard({ product }) {
   const { addItem } = useCart();
+  const [wishlisted, setWishlisted] = useState(false);
 
   const categoryMap = {
     earrings: 'earring',
@@ -17,6 +19,13 @@ export default function ProductCard({ product }) {
         <img src={product.image} alt={product.name} loading="lazy" />
         {product.badge && <span className="product-badge">{product.badge}</span>}
         {product.arEnabled && <span className="ar-badge">AR Try-On</span>}
+        <button
+          className={`wishlist-btn ${wishlisted ? 'active' : ''}`}
+          onClick={e => { e.preventDefault(); setWishlisted(!wishlisted); }}
+          aria-label={wishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
+        >
+          <Heart size={16} fill={wishlisted ? 'currentColor' : 'none'} />
+        </button>
       </Link>
       <div className="product-info">
         <Link to={`/product/${product.id}`} className="product-name">{product.name}</Link>

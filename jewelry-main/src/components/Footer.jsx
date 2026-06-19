@@ -26,6 +26,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Company</h4>
             <Link to="/about">About Us</Link>
+            <Link to="/lookbook">Lookbook</Link>
             <Link to="/seller">Sell on SPJewel</Link>
           </div>
           <div className="footer-col">

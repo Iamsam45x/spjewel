@@ -4,7 +4,7 @@
   z-index: 200;
   display: flex;
   flex-direction: column;
-  background: #000;
+  background: linear-gradient(180deg, #2a2a2a 0%, #000 100%);
   color: #fff;
   overflow: hidden;
 }
@@ -65,9 +65,43 @@
 
 .artryon-canvas {
   position: absolute;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  -webkit-mask-image: url(#silhouette-canvas-mask);
+  mask-image: url(#silhouette-canvas-mask);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center top;
+  mask-position: center top;
+  z-index: 9;
+}
+
+.artryon-silhouette-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  background: linear-gradient(180deg, #2a2a2a 0%, #000 100%);
+  -webkit-mask-image: url(#silhouette-bg-mask);
+  mask-image: url(#silhouette-bg-mask);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center top;
+  mask-position: center top;
+  pointer-events: none;
+  z-index: 8;
 }
 
 .artryon-silhouette {
@@ -80,6 +114,9 @@
   max-width: 400px;
   pointer-events: none;
   z-index: 10;
+}
+
+.artryon-silhouette-guides {
   opacity: 0.35;
 }
 

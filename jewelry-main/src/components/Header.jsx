@@ -27,6 +27,7 @@ export default function Header() {
           <Link to="/catalog" className={isActive('/catalog') ? 'active' : ''} onClick={() => setMobileOpen(false)}>Shop All</Link>
           <Link to="/catalog/earrings" className={isActive('/catalog/earrings') ? 'active' : ''} onClick={() => setMobileOpen(false)}>Earrings</Link>
           <Link to="/catalog/necklaces" className={isActive('/catalog/necklaces') ? 'active' : ''} onClick={() => setMobileOpen(false)}>Necklaces</Link>
+          <Link to="/lookbook" className={isActive('/lookbook') ? 'active' : ''} onClick={() => setMobileOpen(false)}>Lookbook</Link>
           <Link to="/seller" className={isActive('/seller') ? 'active' : ''} onClick={() => setMobileOpen(false)}>Seller Hub</Link>
         </nav>
 
