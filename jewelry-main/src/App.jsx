@@ -8,6 +8,7 @@ import ARTryOn from './pages/ARTryOn';
 import SellerDashboard from './pages/SellerDashboard';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
+import About from './pages/About';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/seller" element={<SellerDashboard />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
       <Footer />
