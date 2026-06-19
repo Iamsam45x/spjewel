@@ -1,0 +1,286 @@
+.detail-page {
+  padding-top: 24px;
+  padding-bottom: 64px;
+}
+
+.detail-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.detail-breadcrumb a {
+  transition: color 0.2s;
+}
+
+.detail-breadcrumb a:hover {
+  color: var(--accent);
+}
+
+.detail-breadcrumb span {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.detail-main-image {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: var(--bg-warm);
+}
+
+.detail-main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--error);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.detail-seller {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+
+.detail-seller:hover {
+  color: var(--accent);
+}
+
+.detail-seller img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.verified-icon {
+  color: var(--success);
+}
+
+.detail-name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.rating-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.rating-count {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.detail-price-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.detail-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.detail-original {
+  font-size: 16px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.detail-discount {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--success);
+  background: var(--success-light);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.detail-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.detail-props {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.detail-metal,
+.detail-gemstone,
+.detail-style {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.metal-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metal-chip {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.metal-chip.gold {
+  background: rgba(184, 134, 11, 0.1);
+  color: #b8860b;
+  border: 1px solid rgba(184, 134, 11, 0.25);
+}
+
+.metal-chip.silver {
+  background: rgba(192, 192, 192, 0.15);
+  color: #888;
+  border: 1px solid rgba(192, 192, 192, 0.3);
+}
+
+.metal-chip.rose {
+  background: rgba(183, 110, 121, 0.1);
+  color: #b76e79;
+  border: 1px solid rgba(183, 110, 121, 0.25);
+}
+
+.gem-chip {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.gem-chip.diamond { background: rgba(170, 204, 255, 0.15); color: #4477bb; border: 1px solid rgba(170, 204, 255, 0.3); }
+.gem-chip.sapphire { background: rgba(34, 68, 204, 0.1); color: #2244cc; border: 1px solid rgba(34, 68, 204, 0.25); }
+.gem-chip.ruby { background: rgba(204, 34, 68, 0.1); color: #cc2244; border: 1px solid rgba(204, 34, 68, 0.25); }
+.gem-chip.emerald { background: rgba(34, 204, 102, 0.1); color: #22aa55; border: 1px solid rgba(34, 204, 102, 0.25); }
+.gem-chip.amethyst { background: rgba(153, 68, 204, 0.1); color: #8833bb; border: 1px solid rgba(153, 68, 204, 0.25); }
+.gem-chip.pearl { background: rgba(255, 245, 230, 0.3); color: #8a7a60; border: 1px solid rgba(255, 245, 230, 0.5); }
+
+.style-chip {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.detail-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.btn-lg {
+  justify-content: center;
+  padding: 14px 24px;
+  font-size: 15px;
+  border-radius: var(--radius-md);
+  width: 100%;
+}
+
+.btn-ar-lg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.btn-ar-lg:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.detail-perks {
+  display: flex;
+  gap: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+}
+
+.perk {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.perk svg {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .detail-perks {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
